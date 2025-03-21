@@ -7,7 +7,7 @@ import validator from 'validator'
 export const createUser = async (req, res, next) => {
   try {
     const { userName, email, password, number } = req.body;
-    console.log("signup");
+    
     
 
     if (!userName || !password || (!email && !number)) {
@@ -41,7 +41,7 @@ export const createUser = async (req, res, next) => {
       res.status(201).json({ success: true, message: "Registed Successfully" });
     }
   } catch (error) {
-    console.log(error);
+
 
     next(error);
   }
@@ -79,7 +79,7 @@ export const loginUser = async (req, res, next) => {
         .json({ success: true, message: "login Successfully", user, token });
     }
   } catch (error) {
-    console.log(error);
+
     next(error);
   }
 };
