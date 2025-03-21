@@ -58,11 +58,11 @@ const ProductPopup = ({ isOpen, onClose, onSubmit, newProduct, handleInputChange
 
 
             <ButtonFeilds type='buttom'  onClick={onClose}
-              className="bg-gray-500 text-whiterounded-lg hover:bg-gray-600 transition-colors rounded" 
+              className="bg-gray-500 text-whiterounded-lg hover:bg-gray-600 h-8 transition-colors rounded" 
               label={"Cancel"} disabled={loading} />
 
             <ButtonFeilds             type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 h-8 transition-colors"
               label={isEditMode?"Updata":"Add"} loading={loading}/>
               
               

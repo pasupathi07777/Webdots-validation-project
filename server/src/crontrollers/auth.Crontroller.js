@@ -2,6 +2,7 @@ import { userModel } from "../models/user.Models.js";
 import { generateToken } from "../utils/jwt.js";
 import customError from "../utils/custom.Error.js";
 import { compareHashData } from "../utils/bcrypt.js";
+import validator from 'validator'
 
 export const createUser = async (req, res, next) => {
   try {
@@ -11,11 +12,17 @@ export const createUser = async (req, res, next) => {
 
     if (!userName || !password || (!email && !number)) {
       throw new customError(400, "all Feilds Required");
-    } else if (email && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)) {
+    } 
+    else if (userName && userName.length<5) {
+      throw new customError(400, "Username must be at least 5 characters long. ");
+    }
+    else if (email && !validator.isEmail(email)) {
       throw new customError(400, "enter a valid Gmail ");
-    } else if (number && String(number).length !== 10) {
+    }
+     else if (number && String(number).length !== 10) {
       throw new customError(400, "enter valid mobile number");
-    } else if (password.length < 8) {
+    }
+     else if (password.length < 8) {
       throw new customError(400, "minimum 8 character ne,ed");
     }
 
@@ -46,7 +53,7 @@ export const loginUser = async (req, res, next) => {
 
     if (!password || (!email && !number)) {
       throw new customError(400, "all Feilds Required");
-    } else if (email && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)) {
+    } else if (email && !validator.isEmail(email)) {
       throw new customError(400, "enter a valid Gmail ");
     } else if (number && String(number).length !== 10) {
       throw new customError(400, "enter valid mobile number");

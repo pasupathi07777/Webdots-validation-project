@@ -1,4 +1,5 @@
 import toast from "react-hot-toast";
+import validator from 'validator';
 
 export const validateForm = (data, type) => {
   const { userName, emailOrNumber, password } = data;
@@ -32,11 +33,10 @@ export const validateForm = (data, type) => {
 
   if (emailOrNumber.includes('@')) {
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailOrNumber)) {
+    if (!validator.isEmail(emailOrNumber)) {
       toast.error('Please enter a valid email address.');
       return false;
-    }
+  } 
   } else {
 
     const hasLetters = /[a-zA-Z]/.test(emailOrNumber);

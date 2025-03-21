@@ -20,7 +20,7 @@ const InputFeilds = ({ placeholder, type, lable, value, setOnChange, loading, na
       />
       {type === 'file' && value && (
         <div className="mt-">
-          <img src={value} alt="Preview" className="w-20 h-20 object-cover rounded-lg" />
+          <img src={value} alt="Preview" className="w-20 h-20 object-contain rounded-lg" />
         </div>
       )}
     </div>

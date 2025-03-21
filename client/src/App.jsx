@@ -12,8 +12,13 @@ const App = () => {
   const { verifyUserLoading } = useSelector(loginState)
   useEffect(() => {
     dispatch(authUser())
+    .unwrap()
+    .then(() => {
+
       dispatch(getUsers());
        dispatch(getProduct());
+    });
+
 
   }, [])
   return (
