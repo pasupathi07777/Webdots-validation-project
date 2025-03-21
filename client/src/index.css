@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+   
+}
+
+
+input{
+    padding: 5px;
+}
+textarea{
+    padding: 5px;
+}
+button{
+    padding: 10px;
+    
+}
+.delete-btn{
+    padding: 5px 10px ;
+}
+
+.model{
+    padding: 10px;
+}
+
+.navbar{
+    padding: 10px 10px;
+}
+.dash{
+   padding: 5px 10px;
+}
+.nav-navigation{
+    padding: 0px 10px;
+    cursor: pointer;
+}
+.home-dash{
+    padding: 10px;
+}
+.home-outlet{
+padding: 10px 10px;
+}
+
+/*  */
+.popup-form{
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    padding: 10px;
+}
+.popup-form div{
+    padding: 10px;
+}
+
+.product{
+    padding: 10px;
+}
+

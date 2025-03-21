@@ -1,0 +1,1 @@
+export const getToken=async ()=>await localStorage.getItem('token');
