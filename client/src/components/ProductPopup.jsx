@@ -17,7 +17,7 @@ const ProductPopup = ({ isOpen, onClose, onSubmit, newProduct, handleInputChange
 
           <InputFeilds
           name={"name"}
-            lable="Product Name"
+            lable=" Name"
             type="text"
             placeholder="Enter product name"
             value={newProduct.name}
@@ -29,7 +29,7 @@ const ProductPopup = ({ isOpen, onClose, onSubmit, newProduct, handleInputChange
  
           <div className="flex flex-col gap-1">
             <label className="block text-sm font-medium text-gray-500" htmlFor="description">
-              Product Description
+               Description
             </label>
             <textarea
               name="description"
@@ -43,7 +43,7 @@ const ProductPopup = ({ isOpen, onClose, onSubmit, newProduct, handleInputChange
           </div>
 
           <InputFeilds
-            lable="Image URL"
+            lable="Image"
             type="file"
             placeholder="Enter image URL"
             value={newProduct.image}
