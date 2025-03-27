@@ -13,7 +13,8 @@ const app=express()
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://webstone-assessment-project.onrender.com"
+  "https://webstone-assessment-project.onrender.com",
+  "https://webdots-validation-project-csyz.vercel.app"
 ];
 
 app.use(
