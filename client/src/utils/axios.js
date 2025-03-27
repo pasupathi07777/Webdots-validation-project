@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000/api/',
+  // baseURL: 'http://localhost:5000/api/',
+  baseURL: 'https://webdots-validation-project-backend.onrender.com/api/',
   withCredentials: true,
 });  
