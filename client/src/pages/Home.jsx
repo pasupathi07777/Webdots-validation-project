@@ -1,9 +1,9 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { productsStates } from '../features/product.Slice';
-import { usersState } from '../features/user.Slice';
+import { getProduct, productsStates } from '../features/product.Slice';
+import { getUsers, usersState } from '../features/user.Slice';
 
 const Home = () => {
   const navigation = useNavigate();
@@ -15,6 +15,11 @@ const Home = () => {
     { name: 'All Users', path: 'users',count:allUsers.length   },
     { name: 'Products', path: 'items',count: products.length },
   ];
+
+  useEffect(()=>{
+    dispatch(getUsers());
+    dispatch(getProduct());
+  })
 
   return (
     <div className="home-dash  h-full flex flex-col gap-4 ">
