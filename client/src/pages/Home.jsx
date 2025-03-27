@@ -4,11 +4,11 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getProduct, productsStates } from '../features/product.Slice';
 import { getUsers, usersState } from '../features/user.Slice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 
 const Home = () => {
-    const dispatch = useDispatch()
+   const dispatch = useDispatch()
   const navigation = useNavigate();
   const {  products } = useSelector(productsStates);
   const {  allUsers } = useSelector(usersState);
