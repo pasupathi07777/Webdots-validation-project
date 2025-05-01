@@ -9,7 +9,6 @@ const userSchema=new mongoose.Schema({
     },
     number:{
         type:Number,
-        unique:true,
         sparse: true,
 
     },
